@@ -62,9 +62,9 @@ We release our best trained DeepSeek-Math's **GSM8K** and **MATH** trained check
 |**DeepSeek_Math_Self_Explore_MATH** |      37.68      | 🤗 [HuggingFace](https://huggingface.co/hbin0701/DeepSeek_GSM8K_Self_Exploret) |
 
 ## Acknowledgemenets
-Some parts of our evaluation code are borrowed from: <br />
-- [OVM](https://github.com/FreedomIntelligence/OVM) <br />
-- [DeepSeek-Math](https://github.com/deepseek-ai/DeepSeek-Math) 
+Our evaluation codes are borrowed from: <br />
+- GSM8K: [OVM](https://github.com/FreedomIntelligence/OVM) <br />
+- MATH: [DeepSeek-Math](https://github.com/deepseek-ai/DeepSeek-Math) 
 
 ## Citation
 ```
