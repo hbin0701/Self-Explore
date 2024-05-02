@@ -78,9 +78,6 @@ def generate(model, data_path, tensor_parallel_size=1, temp=0.7, id=0, task="GSM
     result = []
     res_completions = []
 
-    MAX_NUM_FOR_PROCESSSING = 1000
-    inputs = inputs[:MAX_NUM_FOR_PROCESSSING]
-    answers = answers[:MAX_NUM_FOR_PROCESSSING]
     completions = llm.generate(inputs, sampling_params)
 
     for num, output in enumerate(completions):

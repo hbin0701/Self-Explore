@@ -1,6 +1,6 @@
 {
     "math-cot-test": {
-        "test_path": "../../data/test.jsonl",
+        "test_path": "../../data/MATH_test.jsonl",
         "language": "en",
         "tasks": [
             "cot"

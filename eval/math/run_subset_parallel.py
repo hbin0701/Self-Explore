@@ -44,7 +44,7 @@ def do_parallel_sampling(args, task, answer_extraction_fn, eval_fn, input_dir, o
     n_procs = args.ngpus // args.ngpus_per_model
     n_procs = 4 # temporary
 
-    gpus = [str(i+4) for i in range(args.ngpus)]
+    gpus = [str(i) for i in range(args.ngpus)]
     gpu_groups = []
     for i in range(n_procs):
         gpu_groups.append(gpus[i * args.ngpus_per_model: (i + 1) * args.ngpus_per_model])
