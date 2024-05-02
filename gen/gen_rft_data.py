@@ -112,9 +112,12 @@ if __name__ == "__main__":
     args = parse_args()
     generate(model=args.model, data_path=args.data_file, tensor_parallel_size=args.tensor_parallel_size, temp=args.temp, id=args.id, task=args.task)
 
-    # if all 4 exists, now unite file:
+    file_lists = [args.result_file.replace(".jsonl", f"_{i}.jsonl") for i in range(4)]
+
+    # IF completed:
     import os
-    if all([os.path.exists(args.result_file.replace(".jsonl", f"_{i}.jsonl")) for i in range(4)]):
+    # if all 4 exists, now unite file:
+    if all([os.path.exists(x) for x in file_lists]) and sum([len([json.loads(x) for x in open(file_name)]) for file_name in file_lists]) == len([json.loads(x) for x in open(args.data_file)]):
         from utils_others import unite_file
         unite_file(args.result_file, 4, "_gen")
     
