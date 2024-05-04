@@ -15,7 +15,7 @@ test_data_file: train_data_file_directory # testing data (i.e. eval set) is a du
 
 # DPOTrainer argument
 bf16: true
-beta: 0.01
+beta: 0.1
 do_eval: true
 evaluation_strategy: epoch
 gradient_accumulation_steps: 1

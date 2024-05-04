@@ -20,10 +20,9 @@ accelerate launch \
   --save_dir ${save_dir} \
   --num_train_epoches 5 \
   --save_strategy epoch \
-  --max_length 384 \
-  --per_device_train_batch_size 8 \
-  --per_device_eval_batch_size 2 \
-  --gradient_accumulation_steps 2 \
+  --per_device_train_batch_size 16 \
+  --per_device_eval_batch_size 4 \
+  --gradient_accumulation_steps 1 \
   --gradient_checkpointing True \
   --learning_rate 1e-5 \
   --weight_decay 0 \

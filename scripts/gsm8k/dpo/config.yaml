@@ -15,7 +15,7 @@ test_data_file: train_data_file_directory # testing data (i.e. eval set) is a du
 
 # DPOTrainer argument
 bf16: true
-beta: 0.01
+beta: 0.1
 do_eval: true
 evaluation_strategy: epoch
 gradient_accumulation_steps: 1
@@ -25,8 +25,7 @@ learning_rate: 1.0e-7 # use 1.0e-7 for Mistral, 1.0e-6 for others.
 log_level: info
 logging_steps: 10
 lr_scheduler_type: linear
-max_length: 512
-max_prompt_length: 384
+max_length: 384
 num_train_epochs: 3
 optim: rmsprop
 output_dir: some_directory_to_save # Put directory for saving model checkpoints here
